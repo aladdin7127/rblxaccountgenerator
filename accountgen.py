@@ -46,20 +46,20 @@ time.sleep(1)
 signup = driver.find_element(common.by.By.XPATH, "//*[@id=\"signup-button\"]")
 signup.click()
 
-generated = os.path.join(os.getcwd(), "generated.txt")
+generated = os.path.join(os.getcwd(), "generated")
 data = ""
 
-if (not os.path.exist(generated)):
+if (not os.path.exist(generated + ".txt")):
     with open(generated, "w") as file:
         file.close()
 
 # stupid method i know ¯\_(ツ)_/¯
 
-with open(generated, "r") as file:
+with open(generated + ".txt", "r") as file:
     data = file.read()
     file.close()
 
-with open(generated, "w") as file:
+with open(generated + ".txt", "w") as file:
     file.write(data + "\nusername: " + r_username + "\npassword: " + r_password + "\n\n")
     file.close()
 
