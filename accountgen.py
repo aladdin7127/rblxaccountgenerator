@@ -1,6 +1,5 @@
 from selenium import webdriver
 from selenium.webdriver import common
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import ui
 import random, string, os, time
 
