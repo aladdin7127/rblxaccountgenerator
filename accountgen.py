@@ -49,12 +49,6 @@ signup.click()
 generated = os.path.join(os.getcwd(), "generated")
 data = ""
 
-if (not os.path.exist(generated + ".txt")):
-    with open(generated, "w") as file:
-        file.close()
-
-# stupid method i know ¯\_(ツ)_/¯
-
 with open(generated + ".txt", "r") as file:
     data = file.read()
     file.close()
